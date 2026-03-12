@@ -114,6 +114,7 @@ def chat_with_data(original_query, vectorstore):
     response = chain.invoke({"context": context, "query": original_query})
     return response
 ```
+<img src="images/plus1.png">
 
 ## 遇到的问题：
 cpu加载处理缓慢，更换到CUDA
