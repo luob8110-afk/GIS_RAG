@@ -116,5 +116,8 @@ def chat_with_data(original_query, vectorstore):
 ```
 <img src="images/plus1.png">
 
-# 遇到的问题：
+# 第三版优化：Web端
+<img src="images/plus1.png">
+
+## 遇到的问题：
 cpu加载处理缓慢，更换到CUDA
