@@ -18,7 +18,7 @@ st.caption("基于大语言模型与 RAG 架构 | 支持查询重写与精准文
 # ==========================================
 # 2. 配置区域 (请确保 API Key 和路径正确)
 # ==========================================
-QWEN_API_KEY = "sk-34de2cd3da49416abf37cc616dab3dbf"  #
+QWEN_API_KEY = "密钥"  #
 DATA_FOLDER = "data/"
 DB_PERSIST_DIR = "./chroma_db"
 
@@ -153,4 +153,5 @@ if prompt := st.chat_input("请输入你的专业问题..."):
             st.markdown(answer)
 
     # 将 AI 回答存入记录
+
     st.session_state.messages.append({"role": "assistant", "content": answer})
