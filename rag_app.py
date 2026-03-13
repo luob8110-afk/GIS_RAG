@@ -9,7 +9,7 @@ from langchain_core.prompts import PromptTemplate
 # ==========================================
 # 1. 配置区域 (修改这里)
 # ==========================================
-QWEN_API_KEY = "sk-34de2cd3da49416abf37cc616dab3dbf"
+QWEN_API_KEY = "密钥"
 PDF_FILE_PATH = "data/工程测量规范.pdf"  # 确保文件名和你的实际文件一致
 
 # ==========================================
@@ -110,4 +110,5 @@ if __name__ == "__main__":
 
         answer = chat_with_data(user_input, db)
         print(f"\n💡 专家解答:\n{answer}")
+
         print("-" * 50)
