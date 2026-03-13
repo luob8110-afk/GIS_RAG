@@ -2,7 +2,7 @@
 # 基于 LLM 应用开发框架构建检索增强生成（RAG）系统，解决大模型在特定垂直领域（如测绘专业知识）的幻觉问题
 
 ## 技术栈：
-LangChain，PyMuPDF + RecursiveCharacterTextSplitter，BAAI/bge-large-zh-v1.5，ChromaDB，Qwen API
+LangChain，PyMuPDF + RecursiveCharacterTextSplitter，BAAI/bge-large-zh-v1.5，ChromaDB，Qwen API， Streamlit
 
 ## 第一步：搭建项目结构与环境
 首先创建文件夹GIS_RAG，然后在根目录创建data文件夹存储数据集，并在根目录创建运行代码
@@ -24,8 +24,8 @@ pip install langchain langchain-community langchain-openai langchain-huggingface
 ```bash
 python rag_app.py
 ```
-<img src="images/first_complete.png" width="500">
-<img src="images/fst_question1.png" width="500">
+<img src="images/first_complete.png">
+<img src="images/fst_question1.png">
 
 ## 操作遇到的问题:
 在配置环境时出现了缺少微软的 C++ 编译器，一直显示报错，解决办法是#安装了Download Build Tools。
@@ -116,8 +116,21 @@ def chat_with_data(original_query, vectorstore):
 ```
 <img src="images/plus1.png">
 
-# 第三版优化：Web端
-<img src="images/plus1.png">
-
 ## 遇到的问题：
 cpu加载处理缓慢，更换到CUDA
+
+# 第三版优化：Web端
+<img src="images/web2.png">
+下载streamlit
+
+```bash
+pip install streamlit
+```
+
+独立完成从底层数据处理、模型推理到前端交互的全栈开发。使用 Streamlit 封装底层 LangChain 链路，实现了具备流式输出、状态保持 (Session State) 与高并发缓存管理的 Web 交互界面，完成了产品级的 MVP 交付
+
+## 网址
+Local URL: http://localhost:8501
+Network URL: http://172.26.168.70:8501
+
+
