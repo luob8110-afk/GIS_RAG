@@ -129,8 +129,10 @@ pip install streamlit
 
 独立完成从底层数据处理、模型推理到前端交互的全栈开发。使用 Streamlit 封装底层 LangChain 链路，实现了具备流式输出、状态保持 (Session State) 与高并发缓存管理的 Web 交互界面，完成了产品级的 MVP 交付
 
-##召回率
+## 召回率
 针对初期缺乏真实业务埋点的问题，利用 LLM（Self-Instruct）自动化构建了包含 100 条测绘场景长尾问题的离线测试集（Ground Truth）。经评测，系统核心检索指标 Top-3 召回率达 69%，Top-5 召回率达 75%，有效收敛了通用大模型在垂直领域的“幻觉”边界。
+<img src="images/评测集.png">
+<img src="images/召回率.png">
 
 ## 网址
 Local URL: http://localhost:8501
